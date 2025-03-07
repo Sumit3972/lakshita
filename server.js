@@ -14,7 +14,7 @@ app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/contactForm', {
+mongoose.connect('mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
