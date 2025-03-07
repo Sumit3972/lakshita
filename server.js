@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection URI
-const mongoURI = 'mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/contact';
+const mongoURI = 'mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/';
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
