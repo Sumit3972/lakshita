@@ -14,10 +14,7 @@ app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
+mongoose.connect('mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/').then(() => {
   console.log('Connected to MongoDB');
 }).catch(err => {
   console.log('Error connecting to MongoDB:', err);
@@ -35,8 +32,9 @@ const contactSchema = new mongoose.Schema({
 const Contact = mongoose.model('Contact', contactSchema);
 
 // POST route to handle form submission
-app.post('/submit-form', (req, res) => {
+app.post('/', (req, res) => {
   const { name, email, subject, message } = req.body;
+  console.log(name,email,subject,message);
 
   // Create a new contact entry
   const newContact = new Contact({
