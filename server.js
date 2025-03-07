@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors'); 
-require("dotenv").config(); // Load environment variables
 
 // Initialize the app
 const app = express();
@@ -13,8 +12,8 @@ app.use(cors());
 // Middleware to parse JSON data
 app.use(bodyParser.json());
 
-// Connect to MongoDB
-const mongoURI = process.env.MONGO_URI || 'mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/contact';
+// MongoDB connection URI
+const mongoURI = 'mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/contact';
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
