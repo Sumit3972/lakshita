@@ -14,7 +14,7 @@ app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/').then(() => {
+mongoose.connect('mongodb+srv://sumit3972:Sumit3972@cluster0.uqlpsgc.mongodb.net/contact').then(() => {
   console.log('Connected to MongoDB');
 }).catch(err => {
   console.log('Error connecting to MongoDB:', err);
